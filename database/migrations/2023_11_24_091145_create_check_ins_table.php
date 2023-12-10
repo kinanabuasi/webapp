@@ -16,7 +16,7 @@ return new class extends Migration
             $table->unsignedBiginteger('token_id');
             $table->foreign('token_id')->references('id')->on('Active_tokens')->onDelete('cascade');
             $table->unsignedBiginteger('file_id');
-            $table->foreign('file_id')->references('id')->on('files')->onDelete('cascade');
+            $table->foreign('file_id')->references('id')->on('uploads')->onDelete('cascade');
             $table->timestamps();
         });
     }
